@@ -1,0 +1,293 @@
+/* Grid System */
+* {
+    box-sizing: border-box;
+}
+
+.row{
+    /* Row class */
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+[class*="col-"] {
+    /* Aligning columns */
+    float: left;
+}
+
+/* Creating grid system with 12 columns */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Custon CSS */
+
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url('../../assets/images/background.png');
+}
+
+#content{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Titillium Web;
+}
+
+header{
+	background-color: red;
+	margin: 0;
+	padding: 0;
+}
+
+navbar{
+	background-color: #12307D;
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	position: fixed;
+	clear: both;
+	-webkit-box-shadow: 0px 4px 10px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 10px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 10px -1px rgba(0,0,0,0.75);
+	z-index: 1; /* This prevents the google map from appear in front of the navbar when the page is scrolled on small screens*/
+}
+
+navbar a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+ul{
+	margin-top: 6%;
+}
+
+ul li{
+	display: inline-block;
+	list-style-type: none;
+	font-size: 2em;
+	padding-left: 6%;
+	padding-right: 6%;
+	color: #FFFFFF;
+}
+
+ul li:hover{
+	text-decoration: overline;
+}
+
+/* for navbar */
+#active{
+	text-decoration: overline;
+}
+
+/* for submenus */
+#active2 a{
+	color: #726E6E;
+	font-style: italic;
+}
+
+main span a{
+	color: #ABA9A9;
+}
+
+h3{
+	font-size: 0.93em;
+	color: #ABA9A9;
+}
+
+main{
+	background-color: #FFFFFF;
+	width: 70%;
+	margin-top: 15%;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 2%;
+	-webkit-box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.75);
+	float: left;
+	text-align: justify;
+	clear: both;
+}
+
+main a{
+	text-decoration: none;
+	color: #12307D;
+}
+
+h1{
+	background-image: url('../../assets/images/sun.png');
+	background-repeat: no-repeat;
+	background-position: 0%;
+	padding-left: 8%;
+}
+
+h2{
+	background-color: #12307D;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.images{
+	padding: 2%;
+	border-radius: 10px;
+	text-align: center;
+	max-width: 100%;
+}
+
+.images-carousel{
+	display: none;
+	padding: 2%;
+	border-radius: 10px;
+	text-align: center;
+	max-width: 100%;
+}
+
+.rightalign{
+	float: right;
+	margin-left: 1%;
+}
+
+.leftalign{
+	float: left;
+	margin-right: 1%;
+}
+
+.centeralign{
+	float: center;
+	margin-left: 35%;
+	margin-right: 35%;
+	width: 30%;
+}
+
+.centerfull{
+	float: center;
+	width: 100%;
+}
+
+figure{
+	border-radius: 10px;
+	background-color: #12307D;
+	text-align: center;
+	margin: 0;
+	margin-bottom: 1%;
+}
+
+figcaption{
+	padding-bottom: 3%;
+	margin: 0.8%;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+figure a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+iframe{
+	width: 50%;
+	height: 8%;
+	border: none;
+}
+
+#googleMap{
+	height: 300px;
+	width: 50%;
+	margin: auto;
+}
+
+input[type="text"], textarea{
+	border: 1px solid;
+	border-color: #000000;
+	resize: none;
+}
+
+input[type="submit"]{
+	background-color: #13307D;
+	border: none;
+	border-radius: 6px;
+	color: #FFFFFF;
+	padding: 1.5%;
+	font-size: 0.9em;
+	font-family: Titillium Web;
+	-webkit-box-shadow: inset 6px 6px 22px -7px rgba(0,0,0,0.38);
+-moz-box-shadow: inset 6px 6px 22px -7px rgba(0,0,0,0.38);
+box-shadow: inset 6px 6px 22px -7px rgba(0,0,0,0.38);
+}
+
+
+
+footer{
+	margin: 2%;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 0.9em;
+}
+
+footer a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+/* Media Query for mobile devices */
+@media only screen and (max-width: 984px) {
+    /* Each column now occupies 100% width of the screen */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    main{
+    	margin-top: 50%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    main{
+    	width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 2%;
+    	margin-top: 60%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    main{
+    	width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 2%;
+    	margin-top: 80%;
+    }
+}
+
+@media only screen and (max-width: 423px) {
+    main{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 2%;
+    	margin-top: 100%;
+    }
+    
+    navbar{
+    	font-size: 0.8em;
+    }
+
+    h1{
+    	font-size: 1em;
+    }
+}
