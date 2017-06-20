@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cyclonic</title>
+    <link rel="icon" href="../img/icon.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/index.css" rel="stylesheet">
+
+    <!-- PDF -->
+    <script src='../js/pdfmake.min.js'></script>
+ 	<script src='../js/vfs_fonts.js'></script>
+    
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        <p align="center">
+                        <img src="../img/cyclonic.png" height="50%" width="50%" alt="cyclonic logo"/>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <p align="center">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='../login.html'">
+                        <span class="glyphicon glyphicon-log-out"></span> Log out
+                    </button>
+                    </p>
+                </li>
+                <li>
+                    <p align="center"><img src="../img/wuser.png"/></p>
+                    <h3 align="center">Martha</h3>
+                    <h5 align="center">Síndica</h5>
+                </li>
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home"></span> Início</a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-wrench"></span> Configurações</a>
+                </li>
+                <li>
+                    <a href="relatorio.html"><span class="glyphicon glyphicon-book"></span> Relatórios</a>
+                </li>
+                <li>
+                    <a href="notificacoes.html"><span class="glyphicon glyphicon-bullhorn"></span> Notificações</a>
+                </li>
+                <li>
+                    <a href="calendario.html"><span class="glyphicon glyphicon-calendar"></span> Calendário</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">&#9776;</a>
+                        <h2 align="center">Geração de Relatórios - Residencial Itamaraty</h2>
+                        <br/>
+                        <p align="center">Selecione o tipo de relatório desejado: </p>
+
+                        <br/>
+
+                        <form align="center">
+                            <div class="radio-inline">
+                            <input type="radio" name="relatorio" value="Recolhimento">Recolhimento
+                            </div>
+                            <div class="radio-inline">
+                            <input type="radio" name="relatorio" value="Descontos">Descontos
+                            </div>
+
+
+                            <br/><br/>
+                            <p align="center">
+                                Selecione o Período de Início e Fim: <br/>
+                                <input type="date" id="datai"/>
+                                <input type="date" id="dataf"/>
+                            </p>
+
+                            <br/>
+                            <p align="center">
+                            <button type="button" class="btn btn-primary btn-sm" onclick="printpdf()">
+                                Gerar Relatório
+                            </button>
+                            </p>
+
+                            <script type="text/javascript">
+                                function printpdf() {
+                                    var datainicial = document.getElementById("datai").value;
+                                    var datafinal = document.getElementById("dataf").value;
+                                    var tiporelatorio = document.querySelector('input[name="relatorio"]:checked').value;
+
+                                    var docDefinition = {
+                                        content: [
+                                            'Relatório do tipo ' + tiporelatorio + ' gerado no Período entre ' + datainicial + ' até ' + datafinal,
+                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa erat, mattis vitae suscipit sed, facilisis ac nibh. Duis dignissim cursus leo, et pharetra neque bibendum id. Vivamus dapibus dolor ut velit malesuada, et vulputate massa suscipit. Integer a placerat nisl. Nunc sed mauris efficitur, ullamcorper tellus sed, imperdiet nisi. Integer diam purus, ultricies vel elit quis, bibendum eleifend est. Nunc euismod, sem quis aliquet accumsan, turpis velit aliquam eros, eu sagittis lorem dolor at ex. Integer consequat semper volutpat. Sed ipsum nunc, aliquam at interdum in, pharetra eget ex. Praesent finibus lobortis volutpat. Nullam rutrum quis dui vel posuere. Sed vel rhoncus justo. Praesent quis felis sapien. Aliquam non purus sit amet urna ullamcorper porta non in dui. Nam a eros quis neque facilisis rhoncus ac quis orci.'
+                                        ]
+                                    }
+                                    pdfMake.createPdf(docDefinition).download('relatorio.pdf');
+                                }
+                            </script>
+
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

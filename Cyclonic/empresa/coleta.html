@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cyclonic</title>
+    <link rel="icon" href="../img/icon.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        <p align="center">
+                        <img src="../img/cyclonic.png" height="50%" width="50%" alt="cyclonic logo"/>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <p align="center">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='../login.html'">
+                        <span class="glyphicon glyphicon-log-out"></span> Log out
+                    </button>
+                    </p>
+                </li>
+                <li>
+                    <p align="center"><img src="../img/muser.png"/></p>
+                    <h3 align="center">Antônio</h3>
+                    <h5 align="center">Funcionário</h5>
+                </li>
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home"></span> Início</a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-wrench"></span> Configurações</a>
+                </li>
+                <li>
+                    <a href="relatorio.html"><span class="glyphicon glyphicon-book"></span> Relatórios</a>
+                </li>
+                <li>
+                    <a href="notificacoes.html"><span class="glyphicon glyphicon-bullhorn"></span> Notificações</a>
+                </li>
+                <li>
+                    <a href="condominios.html"><span class="glyphicon glyphicon-modal-window"></span> Condomínios</a>
+                </li>
+                <li>
+                    <a href="rota.html"><span class="glyphicon glyphicon-road"></span> Rotas</a>
+                </li>
+                <li>
+                    <a href="calendario.html"><span class="glyphicon glyphicon-calendar"></span> Calendário</a>
+                </li>
+                <li>
+                    <a href="../public/public.html"><span class="glyphicon glyphicon-eye-open"></span> Público</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">&#9776;</a>
+
+                        <h2 align="center">Recolhimento - <span id="nome"></span> </h2>
+                        <h5 align="center">Síndico Responsável: <span id="sindico"></span></h5>
+                        <h5 align="center">Data: <span id="data"></span></h5><br/>
+
+                        <form align="center">
+
+                            <p>Insira a quantidade de material recolhido: </p>
+                            <input type="text" placeholder="valor em kg"/>
+
+                            <h3>Checklist</h3>
+
+                            <br/>
+                            <p>1. Armazenamento</p>
+                            <div class="radio-inline">
+                            <input type="radio" name="armazenamento" value="Excelete">Excelente
+                            </div>
+                            <div class="radio-inline">
+                            <input type="radio" name="armazenamento" value="Bom">Bom
+                            </div>
+                            <div class="radio-inline">
+                            <input type="radio" name="armazenamento" value="Ruim">Ruim
+                            </div>
+
+                            <br/><br/>
+                            <p>2. Qualidade do Material</p>
+                            <div class="radio-inline">
+                            <input type="radio" name="qualidade" value="Excelete">Excelente
+                            </div>
+                            <div class="radio-inline">
+                            <input type="radio" name="qualidade" value="Bom">Bom
+                            </div>
+                            <div class="radio-inline">
+                            <input type="radio" name="qualidade" value="Ruim">Ruim
+                            </div>
+
+                            <br/><br/>
+                            <p>3. Atendimento</p>
+                            <div class="radio-inline">
+                            <input type="radio" name="atendimento" value="Excelete">Excelente
+                            </div>
+                            <div class="radio-inline">
+                            <input type="radio" name="atendimento" value="Bom">Bom
+                            </div>
+                            <div class="radio-inline">
+                            <input type="radio" name="atendimento" value="Ruim">Ruim
+                            </div>
+
+
+                            <br/><br/>
+                            <p align="center">
+                            <button type="button" class="btn btn-primary btn-sm" onclick="alert('Coleta realizada com sucesso!')">
+                                Enviar
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='notificacoes.html'">
+                                Enviar e ir para notificações
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='condominios.html'">
+                                Voltar
+                            </button>
+                            </p>
+
+                        </form>
+
+                        <script type="text/javascript">
+
+                            var currentTime = new Date();
+                            var month = currentTime.getMonth() + 1;
+                            var day = currentTime.getDate();
+                            var year = currentTime.getFullYear();
+                            var date = (day + "/" + month + "/" + year);
+                            document.getElementById('data').innerHTML = date;
+
+                            var url = document.URL;
+                            var id = url.substring(url.lastIndexOf('=') + 1);
+                            var nome;
+                            var sindico;
+
+                            if (id == 1){
+                                nome = 'Spazio Nautilus';
+                                sindico = 'João Marcos';
+                            }else if (id == 2){
+                                nome = 'Residencial Itamaraty';
+                                sindico = 'Martha';
+                            }else if (id == 3){
+                                nome = 'Condomínio Sun Happy';
+                                sindico = 'Dooley';
+                            }
+                            document.getElementById('nome').innerHTML = nome;
+                            document.getElementById('sindico').innerHTML = sindico;
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

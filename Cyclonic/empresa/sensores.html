@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cyclonic</title>
+    <link rel="icon" href="../img/icon.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        <p align="center">
+                        <img src="../img/cyclonic.png" height="50%" width="50%" alt="cyclonic logo"/>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <p align="center">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='../login.html'">
+                        <span class="glyphicon glyphicon-log-out"></span> Log out
+                    </button>
+                    </p>
+                </li>
+                <li>
+                    <p align="center"><img src="../img/muser.png"/></p>
+                    <h3 align="center">Antônio</h3>
+                    <h5 align="center">Funcionário</h5>
+                </li>
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home"></span> Início</a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-wrench"></span> Configurações</a>
+                </li>
+                <li>
+                    <a href="relatorio.html"><span class="glyphicon glyphicon-book"></span> Relatórios</a>
+                </li>
+                <li>
+                    <a href="notificacoes.html"><span class="glyphicon glyphicon-bullhorn"></span> Notificações</a>
+                </li>
+                <li>
+                    <a href="condominios.html"><span class="glyphicon glyphicon-modal-window"></span> Condomínios</a>
+                </li>
+                <li>
+                    <a href="rota.html"><span class="glyphicon glyphicon-road"></span> Rotas</a>
+                </li>
+                <li>
+                    <a href="calendario.html"><span class="glyphicon glyphicon-calendar"></span> Calendário</a>
+                </li>
+                <li>
+                    <a href="../public/public.html"><span class="glyphicon glyphicon-eye-open"></span> Público</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">&#9776;</a>
+                        <h2 align="center">Sensores - <span id="nome"></span> - <span id="data"></span></h2>
+                        
+                        <p align="center"> Lixeira 1: <span id="sens1"></span></p>
+                        <p align="center"> Lixeira 2: <span id="sens2"></span></p>
+                        <p align="center"> Lixeira 3: <span id="sens3"></span></p>
+                        <p align="center"> Lixeira 4: <span id="sens4"></span></p>
+                        <p align="center"> Lixeira 5: <span id="sens5"></span></p>
+                        <p align="center"> Lixeira 6: <span id="sens6"></span></p>
+                        <p align="center"> Lixeira 7: <span id="sens7"></span></p>
+                        <p align="center"> Lixeira 8: <span id="sens8"></span></p>
+                        <p align="center"> Lixeira 9: <span id="sens9"></span></p>
+                        <p align="center"> Lixeira 10: <span id="sens10"></span></p>
+
+                        <br/><br/>
+                        <p align="center">
+                        <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='condominios.html'">
+                            Voltar
+                        </button>
+                        </p>
+
+                        <script type="text/javascript">
+
+                            var currentTime = new Date();
+                            var month = currentTime.getMonth() + 1;
+                            var day = currentTime.getDate();
+                            var year = currentTime.getFullYear();
+                            var date = (day + "/" + month + "/" + year);
+                            document.getElementById('data').innerHTML = date;
+
+                            var url = document.URL;
+                            var id = url.substring(url.lastIndexOf('=') + 1);
+                            var nome;
+                            var sens1;
+                            var sens2;
+                            var sens3;
+                            var sens4;
+                            var sens5;
+                            var sens6;
+                            var sens7;
+                            var sens8;
+                            var sens9;
+                            var sens10;
+
+                            if (id == 1){
+                                nome = 'Spazio Nautilus';
+                                sens1 = 'VAZIO';
+                                sens2 = 'QUASE VAZIO';
+                                sens3 = 'QUASE CHEIO';
+                                sens4 = 'CHEIO';
+                                sens5 = 'CHEIO';
+                                sens6 = 'VAZIO';
+                                sens7 = 'QUASE VAZIO';
+                                sens8 = 'VAZIO';
+                                sens9 = 'VAZIO';
+                                sens10 = 'QUASE VAZIO';
+                            }else if (id == 2){
+                                nome = 'Residencial Itamaraty';
+                                sens1 = 'CHEIO';
+                                sens2 = 'CHEIO';
+                                sens3 = 'CHEIO';
+                                sens4 = 'CHEIO';
+                                sens5 = 'CHEIO';
+                                sens6 = 'CHEIO';
+                                sens7 = 'CHEIO';
+                                sens8 = 'CHEIO';
+                                sens9 = 'CHEIO';
+                                sens10 = 'CHEIO';
+                            }else if (id == 3){
+                                nome = 'Condomínio Sun Happy';
+                                sens1 = 'VAZIO';
+                                sens2 = 'VAZIO';
+                                sens3 = 'VAZIO';
+                                sens4 = 'VAZIO';
+                                sens5 = 'VAZIO';
+                                sens6 = 'VAZIO';
+                                sens7 = 'QUASE VAZIO';
+                                sens8 = 'VAZIO';
+                                sens9 = 'VAZIO';
+                                sens10 = 'VAZIO';
+                            }
+                            document.getElementById('nome').innerHTML = nome;
+                            document.getElementById('sens1').innerHTML = sens1;
+                            document.getElementById('sens2').innerHTML = sens2;
+                            document.getElementById('sens3').innerHTML = sens3;
+                            document.getElementById('sens4').innerHTML = sens4;
+                            document.getElementById('sens5').innerHTML = sens5;
+                            document.getElementById('sens6').innerHTML = sens6;
+                            document.getElementById('sens7').innerHTML = sens7;
+                            document.getElementById('sens8').innerHTML = sens8;
+                            document.getElementById('sens9').innerHTML = sens9;
+                            document.getElementById('sens10').innerHTML = sens10;
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

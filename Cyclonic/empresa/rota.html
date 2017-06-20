@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cyclonic</title>
+    <link rel="icon" href="../img/icon.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        <p align="center">
+                        <img src="../img/cyclonic.png" height="50%" width="50%" alt="cyclonic logo"/>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <p align="center">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='../login.html'">
+                        <span class="glyphicon glyphicon-log-out"></span> Log out
+                    </button>
+                    </p>
+                </li>
+                <li>
+                    <p align="center"><img src="../img/muser.png"/></p>
+                    <h3 align="center">Antônio</h3>
+                    <h5 align="center">Funcionário</h5>
+                </li>
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home"></span> Início</a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-wrench"></span> Configurações</a>
+                </li>
+                <li>
+                    <a href="relatorio.html"><span class="glyphicon glyphicon-book"></span> Relatórios</a>
+                </li>
+                <li>
+                    <a href="notificacoes.html"><span class="glyphicon glyphicon-bullhorn"></span> Notificações</a>
+                </li>
+                <li>
+                    <a href="condominios.html"><span class="glyphicon glyphicon-modal-window"></span> Condomínios</a>
+                </li>
+                <li>
+                    <a href="rota.html"><span class="glyphicon glyphicon-road"></span> Rotas</a>
+                </li>
+                <li>
+                    <a href="calendario.html"><span class="glyphicon glyphicon-calendar"></span> Calendário</a>
+                </li>
+                <li>
+                    <a href="../public/public.html"><span class="glyphicon glyphicon-eye-open"></span> Público</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">&#9776;</a>
+                        <h2 align="center">Rota de Coleta - <label id="data"></label> </h2>
+
+                        <script type="text/javascript">
+                            var currentTime = new Date();
+                            var month = currentTime.getMonth() + 1;
+                            var day = currentTime.getDate();
+                            var year = currentTime.getFullYear();
+                            var date = (day + "/" + month + "/" + year);
+                            document.getElementById('data').innerHTML = date;
+                        </script>
+
+                        <br/>
+                        <p align="center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d31749.593484150962!2d-35.22626473132952!3d-5.897811487937492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x7b255ffec3cb169%3A0xa011c20f4dbd5846!2sSpazzio+Nautilus%2C+Av.+Abel+Cabral%2C+505+-+Nova+Parnamirim%2C+Parnamirim+-+RN%2C+59151-250%2C+Brasil!3m2!1d-5.874574099999999!2d-35.215859699999996!4m5!1s0x7b257d9763797b3%3A0xcde844cc750f2670!2sEstr.+da+Lagoa+Seca%2C+Parnamirim+-+RN%2C+Brasil!3m2!1d-5.9195883!2d-35.217451499999996!4m5!1s0x7b255ff8a3e9261%3A0xf4889775c31e5fba!2sCondom%C3%ADnio+Sun+Happy+-+Avenida+Abel+Cabral+-+Nova+Parnamirim%2C+Natal+-+RN%2C+Brasil!3m2!1d-5.874524699999999!2d-35.2150708!4m5!1s0x7b2f8bc30b45e39%3A0x81fe1603dc8221b2!2sResidencial+Itamaraty+-+Avenida+Ayrton+Senna+-+Nova+Parnamirim%2C+Parnamirim+-+RN%2C+Brasil!3m2!1d-5.8915446!2d-35.1993788!4m5!1s0x7b2f8b06ccc90d1%3A0x11e2ead277b51cd4!2sSpazio+Nimbus+Residence+Club+-+Rua+Maria+de+Jesus+-+Nova+Parnamirim%2C+Natal+-+RN%2C+Brasil!3m2!1d-5.883960399999999!2d-35.2020836!4m5!1s0x7b2f8b123b41b77%3A0x68d94216cf6ea267!2sSpazio+Senna+-+Avenida+Ayrton+Senna+-+Ne%C3%B3polis%2C+Natal+-+RN%2C+Brasil!3m2!1d-5.8831373!2d-35.1991492!5e0!3m2!1spt-BR!2sus!4v1497959564307" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </p>
+                        
+                        <br/>
+                        <p align="center">
+                        <button type="button" class="btn btn-primary btn-sm">
+                            Adicionar Manualmente
+                        </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

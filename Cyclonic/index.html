@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		 <meta charset="UTF-8"> 
+
+		<!--Import Google Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<style>
+
+			body {
+				margin: 0;
+			}
+
+			.container-presentation {
+				overflow: hidden;
+				position: relative;
+			}
+
+			.container-presentation:hover .presentation {
+				transform: scale(1.1);
+			}
+
+			.container-presentation:hover .center-top {
+				opacity: 1;
+			}
+			
+			.container-presentation:hover .headercontent {
+				opacity: 1;
+			}
+
+			.presentation{
+				width: 100%;
+				height: 450px;
+				opacity: 1;
+				transition: .5s ease;
+				backface-visibility: hidden;
+			}
+
+			.center-top {
+				transition: .5s ease;
+				color: white;
+				opacity: 0;
+
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				text-align: center;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%)
+			}
+
+			.headercontent {
+				transition: .1s ease;
+				opacity: 0;
+				
+				position: absolute;
+				top: 80%;
+				left: 60%;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+
+		<div class="container-presentation">
+
+			<image class="presentation" src="img/presentation.jpg">
+			<div class="container center-top">
+				<br><br>
+				<h1 class="header center teal-text text-lighten-2"><img src="img/Cyclonic.png" alt="Cyclonic Logo" width="40%" height="40%"/></h1>
+				<div class="row center">
+				  <h5 class="header col s12 light">Seu ajudante em materiais recicláveis</h5>
+				</div>
+				<div class="row center">
+				  <a href="login.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Entrar</a>
+				</div>
+				<br><br>
+
+			  </div>
+		</div>
+		
+		<div class="container">
+		<div class="row">
+			<div class="section">
+		  <div class="col s12 m4">
+			<h2 class="center red-text"><i class="large material-icons center">trending_up</i></h2>
+			<h5 class="center">É informativo</h5>
+			
+			<p class="center light">Temos relatórios a disposição para o melhor controle de coleta de materiais recicláveis.</p>
+		  </div>
+		  <div class="col s12 m4">
+			<h2 class="center yellow-text"><i class="large material-icons center">work</i></h2>
+			<h5 class="center">É benéfico</h5>
+			
+			<p class="center light">Tanto a empresa que realiza o recolhimento quanto o condômino usuário são beneficiados com descontos nos impostos.</p>
+		  </div>
+		  <div class="col s12 m4">
+			<h2 class="center green-text"><i class="large material-icons center">person_pin</i></h2>
+			<h5 class="center">É fácil de utilizar</h5>
+			
+			<p class="center light">Empresa ou condômino, Cyclonic trás utilitários para a coleta de lixo, em termos geográficos e cronológicos.</p>
+		  </div>
+		  </div>
+
+		</div>
+		</div>
+		
+		<div class="container">
+			<div class="section">
+
+			  <div class="row">
+				<div class="col s12 center">
+				  <h4>Interessante, não?</h4>
+				  <p class="light">Comece agora mesmo a utilizar a plataforma. Para tal, você precisa autenticar-se. Então, por favor, escolha o seu perfil abaixo:</p>
+				</div>
+			  </div>
+			  
+			  <div class="row">
+				<div class="col s12 m6">
+					<h4>Síndico de condomínio</h4>
+					<p class="dark">Eu sou síndico de um condomínio que deseja aderir ao sistema de recolhimento seletivo de lixo pela plataforma.</p>
+					<a href="cadastro_sindico.html" class="waves-effect waves-light btn-large">Cadastro de síndico</a>
+				</div>
+				
+				<div class="col s12 m6">
+					<h4>Empresa de recolhimento</h4>
+					<p class="dark">Eu sou representante de uma empresa de recolhimento contratada pela prefeitura.</p>
+					<a href="cadastro_empresa.html" class="waves-effect waves-light btn-large">Cadastro de empresa</a>
+				</div>
+			  </div>
+
+			</div>
+		  </div>
+		
+		<footer class="page-footer blue-grey darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <h5 class="white-text">Universidade Federal do Rio Grande do Norte</h5>
+                <p class="grey-text text-lighten-4">Carlos Antônio de Oliveira Neto</p>
+				<p class="grey-text text-lighten-4">Murilo de Araújo Bento</p>
+				<p class="grey-text text-lighten-4">Vinícius Kleiton da Trindade Ramos</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Cyclonic Team
+            <a class="grey-text text-lighten-4 right" href="#!">Extra</a>
+            </div>
+          </div>
+        </footer>
+	</body>
+</html>

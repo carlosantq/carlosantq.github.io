@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cyclonic</title>
+    <link rel="icon" href="../img/icon.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        <p align="center">
+                        <img src="../img/cyclonic.png" height="50%" width="50%" alt="cyclonic logo"/>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <p align="center">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='../login.html'">
+                        <span class="glyphicon glyphicon-log-out"></span> Log out
+                    </button>
+                    </p>
+                </li>
+                <li>
+                    <p align="center"><img src="../img/muser.png"/></p>
+                    <h3 align="center">Antônio</h3>
+                    <h5 align="center">Funcionário</h5>
+                </li>
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home"></span> Início</a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-wrench"></span> Configurações</a>
+                </li>
+                <li>
+                    <a href="relatorio.html"><span class="glyphicon glyphicon-book"></span> Relatórios</a>
+                </li>
+                <li>
+                    <a href="notificacoes.html"><span class="glyphicon glyphicon-bullhorn"></span> Notificações</a>
+                </li>
+                <li>
+                    <a href="condominios.html"><span class="glyphicon glyphicon-modal-window"></span> Condomínios</a>
+                </li>
+                <li>
+                    <a href="rota.html"><span class="glyphicon glyphicon-road"></span> Rotas</a>
+                </li>
+                <li>
+                    <a href="calendario.html"><span class="glyphicon glyphicon-calendar"></span> Calendário</a>
+                </li>
+                <li>
+                    <a href="../public/public.html"><span class="glyphicon glyphicon-eye-open"></span> Público</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">&#9776;</a>
+                        <h2 align="center">Condomínios</h2><br/><br/><br/>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Condomínio</th>
+                                <th>Síndico</th>
+                                <th>Opções</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Spazio Nautilus</td>
+                                <td>João Marcos</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm">
+                                        Gerenciar
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='sensores.html?cond=' + 1">
+                                        Status Sensores
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='coleta.html?cond=' + 1">
+                                        Coleta
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Residencial Itamaraty</td>
+                                <td>Martha</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm">
+                                        Gerenciar
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='sensores.html?cond=' + 2">
+                                        Status Sensores
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='coleta.html?cond=' + 2">
+                                        Coleta
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Condomínio Sun Happy</td>
+                                <td>Dooley</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm">
+                                        Gerenciar
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='sensores.html?cond=' + 3">
+                                        Status Sensores
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='coleta.html?cond=' + 3">
+                                        Coleta
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
